@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.2), rgba(4, 9, 30, 0.2)),
+    url(../img.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+#todo {
+  color: #fff;
+  font-size: 25px;
+  background: none;
+  cursor: pointer;
+  border: none;
+  margin-left: 15px;
+}
+#todo:hover {
+  color: green;
+}
+.header img {
+  margin-left: 40px;
+  width: 50px;
+  height: 50px;
+}
+.header #header-btn {
+  margin-right: 25px;
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.header #header-btn:hover {
+  color: green;
+}
+
+form {
+  display: flex;
+  padding-top: 25px;
+  justify-content: center;
+}
+form input,
+button {
+  padding: 1rem;
+  border: none;
+  font-family: "Comforter";
+  font-size: 1.5rem;
+  background: #fff;
+}
+
+form .fas {
+  font-size: 1.5rem;
+  transition: 0.2s;
+}
+form .fas:hover {
+  font-size: 1.8rem;
+  color: green;
+}
+.list-items {
+  min-width: 30%;
+  list-style: none;
+}
+.todiv {
+  margin: 0.5rem;
+  background: #fff;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 1s;
+}
+.todiv li {
+  flex: 1;
+}
+.complete-btn {
+  background: green;
+  color: #fff;
+  transition: 0.5s;
+}
+.delete-btn {
+  background: rgb(226, 55, 55);
+  color: #fff;
+  transition: 0.5s;
+}
+.complete-btn:hover {
+  color: black;
+}
+.delete-btn:hover {
+  color: black;
+}
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.completd {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.anim {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0) !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  transition: 1s !important;
+}
+
+.modal-content {
+  background-color: rgb(85, 89, 102) !important;
+  margin: auto;
+  padding: 30px;
+  border: 2px outset rgb(221, 69, 69) !important;
+  width: 30% !important;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  position: relative;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+#para {
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 601px) {
+  li {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  li {
+    font-size: 14px;
+  }
+}
