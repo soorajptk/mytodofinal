@@ -66,7 +66,7 @@ span.style.cssText="background-color:red"
   passwordspan.style.cssText="background-color:red"
 }else if(username==="Admin"&&userpassword==="12345"){
   
-  dis("successfully logged &#128549;");
+  dis("successfully logged &#128077;");
   var modal = document.getElementById("myModal");
   modal.addEventListener("click",()=>{
   location.replace("./home/home.html")

@@ -87,7 +87,6 @@ function completecheck(e){
    }
 }
 
-// list.addEventListener("click",count);
  let inc=0;
 
  function count(todo){
@@ -97,10 +96,8 @@ function completecheck(e){
      } else{
          inc--;
      }
-    //  console.log(inc)
 
      if(inc==5){
-        //  alert("you complted 5 task")
 
 
         dis();
@@ -159,8 +156,6 @@ function add(event){
 
     storage(input.value);
     const complete_btn=document.createElement("button");
-    // complete_btn.value=data[x].completed;
-    // console.log(complete_btn.value)
     complete_btn.innerHTML='<i class="fas fa-check"></i>'
     complete_btn.classList.add("complete-btn");
     Todiv.appendChild(complete_btn)
